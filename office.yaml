@@ -74,7 +74,7 @@ packages:
   - name: knowledge
     repo: https://github.com/meeaster/opencode-office.git
     path: packages/knowledge
-    ref: f853224c8cd2fe91b46cd382763037d43b4cf82f
+    ref: 75dc3788d5f5d8bf6823a969845d6c89a5739a06
 #  - name: artifact-share
 #    repo: https://github.com/meeaster/opencode-office.git
 #    path: packages/artifact-share
@@ -84,6 +84,7 @@ packages:
   - name: artifact-share
     repo: https://github.com/meeaster/opencode-office.git
     path: packages/artifact-share
-    ref: f853224c8cd2fe91b46cd382763037d43b4cf82f
+    ref: 75dc3788d5f5d8bf6823a969845d6c89a5739a06
     settings:
       url: https://meeaster.github.io/office-pages-test
+      theme: dracula

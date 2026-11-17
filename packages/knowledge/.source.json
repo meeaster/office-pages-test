@@ -1,8 +1,8 @@
 {
   "repo": "https://github.com/meeaster/opencode-office.git",
   "path": "packages/knowledge",
-  "ref": "f853224c8cd2fe91b46cd382763037d43b4cf82f",
-  "commit": "f853224c8cd2fe91b46cd382763037d43b4cf82f",
+  "ref": "75dc3788d5f5d8bf6823a969845d6c89a5739a06",
+  "commit": "75dc3788d5f5d8bf6823a969845d6c89a5739a06",
   "files": {
     "LICENSE": "2b4af82395f9ada3e7738626a478c871589032b1dda023062855deb832f5e79c",
     "README.md": "172bafde05ba1443fdedd81b2943fbffff5b366c24e39393364e0ff081a84b6a",
@@ -10,5 +10,5 @@
     "plugin/index.ts": "56c352f6c17b0219363323a6be0dc5b8fcf741d809cc67bf3b3a30195b7d2ed4",
     "template/knowledge/README.md": "385a16dfeff6652dcedc0aa031406a14e21b9a36b017b7e0179f52f3b54c4996"
   },
-  "copied": "2026-11-17T03:30:43.403Z"
+  "copied": "2026-11-17T04:36:21.667Z"
 }
