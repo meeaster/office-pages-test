@@ -1,0 +1,14 @@
+# Written by `office pin` from office.yaml's versions; don't edit. For each tool, the SHA-256 of
+# the release file the image downloads (Executor: the image's digest).
+opencode:
+  version: 2.3.0
+  digest: sha256:fc0f81522aceeabac47693d88389efa2bc517ce74c2c38fd6967819fcc6e4d3b
+claude:
+  version: 2.1.322
+  digest: sha256:3d2bc5ae54d4d4cd63510e9fcca5b6d48d2b18806708df8c8f691aa486c5dca8
+executor:
+  version: 2.0.0-beta.49
+  digest: sha256:cc693691db13635ad5abb456fa132634816ec7acc73f04bd6b8932e0a8c45038
+mise:
+  version: 2026.11.7
+  digest: sha256:8f5426d9971eaf713b37509749174ca69cf2f08b8b25e389168dcfcab9cd1a4d

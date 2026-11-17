@@ -1,0 +1,18 @@
+{
+  "repo": "https://github.com/meeaster/opencode-office.git",
+  "path": "packages/artifact-share",
+  "ref": "f853224c8cd2fe91b46cd382763037d43b4cf82f",
+  "commit": "f853224c8cd2fe91b46cd382763037d43b4cf82f",
+  "files": {
+    "LICENSE": "2b4af82395f9ada3e7738626a478c871589032b1dda023062855deb832f5e79c",
+    "README.md": "ba005ac833ea57c3bb8c2052ab6176054d235c8d88430ed3021c947ac0ce2f7c",
+    "package.yaml": "4fd7b85d9006d6b6d0a141c1c62103dac055c4577382a02f33374f52f699af1f",
+    "scripts/build-site.ts": "2b4a743d69590302f55f0dc849d5957ee1a37c6df4f19a979091d02d63e38846",
+    "scripts/style.css": "1dcc34963a9b7eff4302aa6f6abdc16b145178f2af32e08136e46c91e78745ec",
+    "skills/share-artifact/SKILL.md": "adf2bbd9290e6601c5cdd690075ce9d61c8a1d514c08d4280134452670888a46",
+    "template/.github/workflows/publish-artifacts.yml": "14447d6c7b4a2cb97434f1766ce85aed6bb3a8b402ccd2ae0eb20a46c7f7023c",
+    "template/artifacts/AGENTS.md": "aa0d63dc2edd6156903ab943dc5df73d375e9171517988a294386d9a83cbb0f2",
+    "template/artifacts/README.md": "576d1419a504f164c77d9b3bb365e5b890772625c5902f0387ced07df81ccf20"
+  },
+  "copied": "2026-11-17T03:30:43.922Z"
+}

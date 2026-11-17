@@ -1,0 +1,89 @@
+# The office's declarations: only what OpenCode can't do itself. MCP servers, agents and
+# published plugins go in .opencode/opencode.jsonc. Run `office sync` after changing this file.
+name: office-pages-test
+
+# Optional: where this office's runtime state (passwords, tokens, the container's home) lives on
+# this machine. The default is ~/.local/share/office/<name>.
+# state: ~/.local/share/office/office-pages-test
+
+# Where OpenCode runs: `container` (the default), the office's opencode container, or `host`, an
+# OpenCode server already running on this machine, which the office never starts or stops.
+# Executor and the office's other services always run in containers.
+opencode: container
+# opencode:
+#   mode: host
+#   url: http://127.0.0.1:4096
+
+# Optional: who the office commits as, the git default in the container and for its cron jobs (a
+# repository's own config overrides it), and `credentials: gh` to authenticate HTTPS remotes with
+# the host's gh login, which the container shares read-only. `credentials: gh` also authorizes
+# `office setup` to run `gh auth setup-git` and pin gh in mise.toml. Interactive setup offers both.
+# git:
+#   name: Your Name
+#   email: you@example.com
+#   credentials: gh
+
+# The versions this office runs in its containers. office.lock (written by `office pin`; don't
+# edit it) holds their checksums: run `office pin` after changing a version by hand. The daily
+# upgrade-tools job bumps them; `office up --upgrade` applies a bump, `office up` never does. In
+# host mode only Executor's applies.
+versions:
+  opencode: 2.3.0
+  claude: 2.1.322
+  executor: 2.0.0-beta.49
+  mise: 2026.11.7
+
+# How old a release must be before the upgrade-tools job moves to it: one default, and per-tool
+# ages for the versions above or any tool in a mise.toml. Executor publishes a beta almost daily,
+# and each upgrade means a backup, a restart and redeploying every app, so it waits longer.
+upgrades:
+  minimum_release_age: 1d
+  executor: 7d
+
+# Read-only clones under references/, listed for every session.
+references: []
+#  - name: opencode
+#    url: https://github.com/anomalyco/opencode.git
+#    ref: dev
+#    description: OpenCode's source and docs
+
+desks:
+  example:
+    description: An example desk. Rename it, or add desks beside it.
+    repos: []
+    skills: []
+
+skills:
+  # Library skills (skills/<id>/) linked into the root's .opencode/skills/, so every desk gets them.
+  enabled: [office]
+  # Skills copied into skills/ from another repository. Delete the copy and sync to refresh it.
+  copied: []
+  #  - { name: ..., repo: https://github.com/..., ref: main, path: skills/... }
+
+# OpenCode plugins developed in another repository, cloned into .opencode/plugins/<name>/.
+plugins: []
+
+# Optional capabilities, each a folder packages/<name>/ that office sync installs: its skills and
+# its plugin load in every session, and each file of its template/ is copied once into the office
+# (a file you delete stays deleted).
+# With repo, path and ref (a tag or a full commit SHA) it is copied from that repository and
+# updated when ref changes; without them it is authored here. Settings aren't secrets: sync writes
+# them to packages/<name>/.settings.json, which is committed. Commit what sync writes.
+packages:
+  # Lists the articles in knowledge/ in every session.
+  - name: knowledge
+    repo: https://github.com/meeaster/opencode-office.git
+    path: packages/knowledge
+    ref: f853224c8cd2fe91b46cd382763037d43b4cf82f
+#  - name: artifact-share
+#    repo: https://github.com/meeaster/opencode-office.git
+#    path: packages/artifact-share
+#    ref: <tag or full commit SHA>
+#    settings:
+#      url: https://<owner>.github.io/<repository>
+  - name: artifact-share
+    repo: https://github.com/meeaster/opencode-office.git
+    path: packages/artifact-share
+    ref: f853224c8cd2fe91b46cd382763037d43b4cf82f
+    settings:
+      url: https://meeaster.github.io/office-pages-test

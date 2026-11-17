@@ -1,0 +1,5 @@
+[
+  ".github/workflows/publish-artifacts.yml",
+  "artifacts/AGENTS.md",
+  "artifacts/README.md"
+]
